@@ -1,7 +1,7 @@
 {
   "name": "ripeleads-cold-email",
   "displayName": "Ripe Leads Cold Email Writer",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Write, audit and fix B2B cold emails, build an ideal customer profile, check SPF/DKIM/DMARC deliverability, and answer prospect replies.",
   "author": {
     "name": "Ripe Leads",
@@ -28,5 +28,6 @@
   "privacyPolicyUrl": "https://ripeleads.eu/privacy",
   "termsOfServiceUrl": "https://ripeleads.eu/terms",
   "supportUrl": "https://ripeleads.eu/imprint",
-  "documentationUrl": "https://github.com/ripeleads-eu/cold-email-writer#readme"
+  "documentationUrl": "https://github.com/ripeleads-eu/cold-email-writer#readme",
+  "icon": "./assets/logo.png"
 }
