@@ -5,7 +5,7 @@ Tone: plain description of a tool. No sales language, no claims about results.
 **Display name** (max 30 chars, this is 28):
 Ripe Leads Cold Email Writer
 
-**Category:** Productivity
+**Category:** Business & Operations
 
 **Short description** (max 30 chars, this is 27):
 Write cold emails, fix spam

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ripeleads-cold-email",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Write and audit B2B cold emails, build an ideal customer profile, check SPF/DKIM/DMARC, and draft prospect replies.",
   "author": {
     "name": "Ripe Leads",
@@ -23,11 +23,15 @@
       "interface": {
         "displayName": "Ripe Leads Cold Email Writer",
         "shortDescription": "Write cold emails, fix spam",
-        "longDescription": "Write a cold email with a subject line, score and fix an existing cold email, build an ideal customer profile from a website, check SPF, DKIM and DMARC for a domain, and draft a reply to a prospect.",
+        "longDescription": "Writes and checks B2B cold emails. Five skills:\n\nCold email writer. Writes one cold email under 90 words with a subject line: opens on the prospect, uses one fact about their company, ends on one question. A short sequence on request.\n\nCold email audit. Scores a pasted email out of 100 (length, spam words, opening line, personalisation, value, call to action, tone) and returns a fixed version.\n\nICP builder. Takes a website and returns up to three target segments, job titles, buying signals and bad-fit exclusions, each marked verified or inferred.\n\nEmail deliverability check. Looks up SPF, DKIM, DMARC and MX for a domain and gives the exact DNS records to add.\n\nReply handler. Takes a prospect's reply and drafts one short answer in their language.\n\nNot for bulk sending, buying email lists or scraping personal data. It writes and checks; you send.",
         "developerName": "Ripe Leads",
-        "category": "Productivity",
+        "category": "Business & Operations",
         "capabilities": [
-          "Write"
+          "Write cold emails",
+          "Audit cold emails",
+          "Build ideal customer profiles",
+          "Check email deliverability (SPF, DKIM, DMARC)",
+          "Draft replies to prospects"
         ],
         "websiteURL": "https://ripeleads.eu",
         "privacyPolicyURL": "https://ripeleads.eu/privacy",
