@@ -1,0 +1,46 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ripeleads-cold-email",
+  "version": "0.3.0",
+  "description": "Write and audit B2B cold emails, build an ideal customer profile, check SPF/DKIM/DMARC, and draft prospect replies.",
+  "author": {
+    "name": "Ripe Leads",
+    "url": "https://ripeleads.eu"
+  },
+  "homepage": "https://ripeleads.eu/?utm_source=chatgpt-plugin&utm_medium=manifest&utm_campaign=cold-email-writer",
+  "repository": "https://github.com/ripeleads-eu/cold-email-writer",
+  "license": "MIT",
+  "keywords": [
+    "cold email",
+    "b2b sales",
+    "lead generation",
+    "outbound",
+    "email deliverability",
+    "ideal customer profile"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Ripe Leads Cold Email Writer",
+        "shortDescription": "Write cold emails, fix spam",
+        "longDescription": "Write a cold email with a subject line, score and fix an existing cold email, build an ideal customer profile from a website, check SPF, DKIM and DMARC for a domain, and draft a reply to a prospect.",
+        "developerName": "Ripe Leads",
+        "category": "Productivity",
+        "capabilities": [
+          "Write"
+        ],
+        "websiteURL": "https://ripeleads.eu",
+        "privacyPolicyURL": "https://ripeleads.eu/privacy",
+        "termsOfServiceURL": "https://ripeleads.eu/terms",
+        "defaultPrompt": [
+          "Write a cold email for my B2B service",
+          "Review my cold email and tell me why nobody replies",
+          "Check SPF, DKIM and DMARC for my domain"
+        ],
+        "supportURL": "https://ripeleads.eu/imprint",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/icon.png"
+      }
+    }
+  }
+}

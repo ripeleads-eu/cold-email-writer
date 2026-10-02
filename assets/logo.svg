@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Ripe Leads Cold Email Writer">
+  <title>Ripe Leads Cold Email Writer</title>
+  <defs>
+    <linearGradient id="ripe" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFC53D"/>
+      <stop offset="0.5" stop-color="#FF9B2E"/>
+      <stop offset="1" stop-color="#FB5C2D"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="504" height="504" rx="114" fill="#15120E" stroke="#2E261E" stroke-width="6"/>
+  <rect x="88" y="140" width="336" height="240" rx="42" fill="none" stroke="url(#ripe)" stroke-width="34"/>
+  <path d="M110 170 L256 280 L402 170" fill="none" stroke="url(#ripe)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="256" cy="286" r="66" fill="#15120E"/>
+  <circle cx="256" cy="286" r="52" fill="#FB5C2D"/>
+  <path d="M256 234 C 258 196, 290 174, 330 178 C 326 218, 296 240, 256 234 Z" fill="#2BB673" stroke="#15120E" stroke-width="10" stroke-linejoin="round" paint-order="stroke"/>
+</svg>

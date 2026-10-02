@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ripeleads",
+  "description": "B2B cold email skills from Ripe Leads.",
+  "owner": {
+    "name": "Ripe Leads",
+    "url": "https://ripeleads.eu"
+  },
+  "plugins": [
+    {
+      "name": "ripeleads-cold-email",
+      "description": "Write and audit cold emails, build an ICP, check SPF/DKIM/DMARC deliverability, answer prospect replies.",
+      "source": "./",
+      "category": "productivity",
+      "tags": ["cold email", "sales", "lead generation", "outbound", "deliverability"]
+    }
+  ]
+}

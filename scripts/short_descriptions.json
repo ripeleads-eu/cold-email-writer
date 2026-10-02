@@ -1,0 +1,7 @@
+{
+  "cold-email-writer": "Write a B2B cold email with a subject line. Use for cold outreach, prospecting emails and sales emails.",
+  "cold-email-audit": "Review, score and fix a cold email. Use when asked to check a sales email, find spam words, or explain why nobody replies to outreach.",
+  "icp-builder": "Build an ideal customer profile (ICP) and B2B targeting from a website. Use when asked who to target, buyer personas, or lead list criteria.",
+  "email-deliverability-check": "Check why emails go to spam. Use for SPF, DKIM and DMARC checks and the exact DNS records to fix.",
+  "cold-email-reply-handler": "Reply to a prospect who answered a cold email. Use for sales objections, 'not interested', 'send more info' or pricing questions."
+}

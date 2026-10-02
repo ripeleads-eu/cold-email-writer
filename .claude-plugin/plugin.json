@@ -1,0 +1,32 @@
+{
+  "name": "ripeleads-cold-email",
+  "displayName": "Ripe Leads Cold Email Writer",
+  "version": "0.3.0",
+  "description": "Write, audit and fix B2B cold emails, build an ideal customer profile, check SPF/DKIM/DMARC deliverability, and answer prospect replies.",
+  "author": {
+    "name": "Ripe Leads",
+    "url": "https://ripeleads.eu"
+  },
+  "homepage": "https://ripeleads.eu/?utm_source=plugin&utm_medium=manifest&utm_campaign=cold-email-writer",
+  "repository": "https://github.com/ripeleads-eu/cold-email-writer",
+  "license": "MIT",
+  "keywords": [
+    "cold email",
+    "cold outreach",
+    "b2b sales",
+    "lead generation",
+    "outbound",
+    "sales email",
+    "email deliverability",
+    "spf dkim dmarc",
+    "ideal customer profile",
+    "icp",
+    "prospecting",
+    "follow-up email"
+  ],
+  "skills": "./skills/",
+  "privacyPolicyUrl": "https://ripeleads.eu/privacy",
+  "termsOfServiceUrl": "https://ripeleads.eu/terms",
+  "supportUrl": "https://ripeleads.eu/imprint",
+  "documentationUrl": "https://github.com/ripeleads-eu/cold-email-writer#readme"
+}
