@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ripeleads-cold-email",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Write and audit B2B cold emails, build an ideal customer profile, check SPF/DKIM/DMARC, and draft prospect replies.",
   "author": {
     "name": "Ripe Leads",

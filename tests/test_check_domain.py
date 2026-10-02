@@ -43,7 +43,7 @@ def test_dmarc_missing(monkeypatch):
 
 
 def test_dkim_found_and_missing(monkeypatch):
-    monkeypatch.setattr(cd, "query", stub({("s1._domainkey.x.com", "TXT"): ["v=DKIM1; k=rsa; p=MIIB"]}))
+    monkeypatch.setattr(cd, "query", stub({("s1._domainkey.x.com", "TXT"): ["v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A"]}))
     assert cd.check_dkim("x.com", ["s1", "s2"]) == ["OK    DKIM: selector 's1' published"]
     assert cd.check_dkim("x.com", ["zz"])[0].startswith("WARN")
 
@@ -110,3 +110,18 @@ def test_spf_lookup_limit(monkeypatch):
     eleven = "v=spf1 " + " ".join(f"include:s{i}.example.com" for i in range(11)) + " -all"
     assert "DNS lookups" not in _spf(monkeypatch, ten)
     assert "FAIL  SPF: about 11 DNS lookups" in _spf(monkeypatch, eleven)
+
+
+def test_dkim_revoked_key_not_counted(monkeypatch):
+    monkeypatch.setattr(cd, "query", stub({("s1._domainkey.x.com", "TXT"): ["v=DKIM1; k=rsa; p="]}))
+    assert cd.check_dkim("x.com", ["s1"])[0].startswith("WARN")
+
+
+def test_null_mx_fails(monkeypatch):
+    monkeypatch.setattr(cd, "query", stub({("x.com", "MX"): ["0 ."]}))
+    assert cd.check_mx("x.com")[0].startswith("FAIL")
+
+
+def test_dns_text_is_sanitised():
+    out = cd.clean('"v=spf1\x1b[31m" "-all' + "a" * 600 + '"')
+    assert out.startswith("v=spf1[31m-all") and "\x1b" not in out and len(out) == 512

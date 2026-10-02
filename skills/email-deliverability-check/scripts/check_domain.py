@@ -87,6 +87,11 @@ def check_dmarc(domain: str) -> list[str]:
     return out
 
 
+def has_dkim_key(record: str) -> bool:
+    # An empty p= means the key was revoked, not published.
+    return re.search(r"(^|;)\s*p=[A-Za-z0-9+/]{10,}", record) is not None
+
+
 def check_dkim(domain: str, selectors: list[str]) -> list[str]:
     found = []
     for sel in selectors:
@@ -94,7 +99,7 @@ def check_dkim(domain: str, selectors: list[str]) -> list[str]:
             recs = query(f"{sel}._domainkey.{domain}", "TXT")
         except Exception:
             continue
-        hits = [r for r in recs if "p=" in r]
+        hits = [r for r in recs if has_dkim_key(r)]
         if hits:
             found.append(f"OK    DKIM: selector '{sel}' published")
     if not found:
@@ -107,6 +112,8 @@ def check_mx(domain: str) -> list[str]:
     mx = query(domain, "MX")
     if not mx:
         return ["WARN  MX: no MX records, replies to this domain will bounce"]
+    if any(r.split()[-1] == "." for r in mx if r.split()):
+        return ["FAIL  MX: null MX record, this domain accepts no mail"]
     return [f"OK    MX: {', '.join(sorted(mx))}"]
 
 
